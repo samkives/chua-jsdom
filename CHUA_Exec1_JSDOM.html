@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHUA, OA 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3e5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #6a1b9a;
+    }
+
+    button {
+      background-color: #9c27b0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #7b1fa2;
+    }
+
+    p {
+      margin-top: 20px;
+      color: #6a1b9a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>What's Your Favorite?</h1>
+    <button>Click ME to enter Your Favorite Food</button>
+    <p id="favoriteFood"></p>
+  </div>
+
+  <script>
+    function yourFavorite() {
+      const food = prompt("Please enter your favorite food");
+      document.getElementById("favoriteFood").textContent = `Your favorite food is: ${food}`;
+    }
+
+    const button = document.querySelector("button");
+    button.addEventListener("click", yourFavorite);
+  </script>
+</body>
+</html>
